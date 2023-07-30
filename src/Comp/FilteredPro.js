@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function FilteredPro({ products, length, extraClass }) {
-  if (length > 3){
+  if (length > 5){
     return (
         <div className={`${extraClass} searching`}>
           <h3>Too many products to show, specify your search</h3>

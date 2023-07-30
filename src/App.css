@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .top{
   display: flex;
   flex-direction: row;
@@ -12,6 +17,7 @@
   height: 10vh;
   align-items: center;
   position: relative;
+  background-color: #4c5454;
 }
 
 .hidden{
@@ -114,3 +120,68 @@ li{
   height: 100%;
 }
 
+.tablecate img{
+  width: 100%;
+  height: 100%;
+}
+
+.tabletop{
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+.tabletop img{
+  object-fit: cover;
+  width: 100%;
+}
+.tophalf{
+  width: 33%;
+}
+.tablelow{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 50%, rgba(0,0,0,1) 100%);
+  font-size: 25px;
+}
+
+.category{
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay{
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  top: 90%;
+  left: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 2;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+
+.category:hover h3{
+  z-index: 3;
+  color: #1ea896;
+  position: relative;
+  font-size: 40px;
+}
+.category:hover .overlay{
+  display: block;
+  transform: translateY(-90%);
+}

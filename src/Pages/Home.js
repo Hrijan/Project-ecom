@@ -4,6 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from 'react-router-dom';
+import Picks from '../Comp/Picks';
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
 
 
   return (
+    <>
     <div className='tabled'>
       <div className="carousel">
         <OwlCarousel className='owl-theme' loop margin={10} items={1} autoplay autoplayHoverPause stagePadding={-10} dots={false}>
@@ -37,22 +39,28 @@ export default function Home() {
       </div>
       <div className='tablecate'>
         <div className="tabletop">
-          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/1/1.jpg'} alt="" /></Link>
-          <div className="category">
-
+          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/1/1.jpg'} alt="" className='tophalf' /></Link>
+          <div className="category tophalf">
+            <div className="overlay"></div>
+            <Link to={'/'}><h3>Smartphones</h3></Link>
           </div>
-          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/2/2.jpg'} alt="" /></Link>
+          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/2/2.jpg'} alt="" className='tophalf' /></Link>
         </div>
         <div className="tablelow">
-          <div className="category">
-            
+          <div className="category tophalf">
+            <div className="overlay"></div>
+            <Link to={'/'}><h3>Laptops</h3></Link>
           </div>
-          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/4/1.jpg'} alt="" /></Link>
-          <div className="category">
-            
+          <Link to={'/'}><img src={'https://i.dummyjson.com/data/products/4/1.jpg'} alt="" className='tophalf' /></Link>
+          <div className="category tophalf">
+            <div className="overlay"></div>
+            <Link to={'/'}><h3>Fragrances</h3></Link>
           </div>
         </div>
       </div>
     </div>
+
+    <Picks allCate={allProducts}/>
+    </>
   )
 }
